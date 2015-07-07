@@ -79,7 +79,7 @@ class PEAR_Sniffs_Commenting_FunctionCommentSniff implements PHP_CodeSniffer_Sni
         }
 
         if ($tokens[$commentEnd]['code'] === T_COMMENT) {
-            $phpcsFile->addError('You must use "/**" style comments for a function comment', $stackPtr, 'WrongStyle');
+            $phpcsFile->addError('You must use "/**" style comments for a function comment', $commentEnd, 'WrongStyle');
             return;
         }
 
